@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /listok-tlac/
+Disallow: /menu-tlac/
+Disallow: /socialne-zdroj/
+Sitemap: https://steip.sk/sitemap.xml

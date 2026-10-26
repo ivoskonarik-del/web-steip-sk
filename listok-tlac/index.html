@@ -1,0 +1,83 @@
+<!doctype html><html lang="sk"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
+<title>Jedálny lístok na tlač, Hostinec Steip</title>
+<link rel="stylesheet" href="../assets/fonty-kaviaren.css">
+<style>:root{--akcent:#B3261E;--akcent-text:#B3261E;--jemna:color-mix(in srgb,#B3261E 9%,#fff);--papier:#F5F6F8;--p-akcent:#B3261E}
+* { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+html, body { margin: 0; background: #d5d8dc; }
+body { font-family: Figtree, system-ui, sans-serif; color: #1D2327; }
+img { display: block; }
+.foto { position: relative; overflow: hidden; }
+.foto img { width: 100%; height: 100%; object-fit: cover; }
+
+@page { size: A4; margin: 0; }
+.a4 { width: 210mm; height: 297mm; margin: 10mm auto; background: var(--papier); overflow: hidden; position: relative;
+      page-break-after: always; break-after: page; padding: 14mm 14mm 10mm; display: flex; flex-direction: column; }
+@media print { html, body { background: none; } .a4 { margin: 0; } }
+.logo { font-weight: 800; letter-spacing: -.035em; line-height: .95; }
+.hl { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 5mm; border-bottom: .35mm solid #D9DDE1; }
+.hl .logo { font-size: 20pt; }
+.hl span { font-size: 11pt; font-weight: 600; color: var(--akcent-text); }
+.pata { display: flex; justify-content: space-between; font-size: 8.5pt; color: #5B646B; padding-top: 4mm; margin-top: auto; }
+.cislo { font-weight: 700; color: #1D2327; }
+
+/* titulka lístka */
+.tit .foto { height: 150mm; border-radius: 4mm; margin: -2mm -2mm 0; }
+.tit .logo { font-size: 64pt; margin-top: 12mm; }
+.tit__podnadpis { font-size: 18pt; font-weight: 600; color: var(--akcent-text); margin: 3mm 0 0; }
+.tit__claim { font-size: 12pt; line-height: 1.5; color: #3A4247; max-width: 130mm; margin: 6mm 0 0; }
+.tit__info { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; margin-top: auto; font-size: 9.5pt; line-height: 1.6; color: #3A4247; }
+.tit__info b { display: block; color: #1D2327; font-size: 8.5pt; margin-bottom: 1mm; }
+
+/* stránky lístka: dva stĺpce */
+.obsah { columns: 2; column-gap: 12mm; flex: 1 1 0; min-height: 0; padding-top: 7mm; column-fill: auto; }
+.kat { margin-bottom: 7mm; break-inside: avoid; }
+.kat h2 { font-size: 15pt; font-weight: 700; color: var(--akcent-text); margin: 0 0 2.5mm; letter-spacing: -.01em; break-after: avoid; }
+.pol { display: grid; grid-template-columns: 1fr auto; gap: .6mm 4mm; padding: 2.1mm 0; break-inside: avoid; }
+.pol b { font-size: 10pt; font-weight: 650; line-height: 1.3; }
+.pol .c { font-size: 10pt; font-weight: 700; white-space: nowrap; }
+.pol .m { grid-column: 1; font-size: 8pt; color: #5B646B; line-height: 1.4; }
+.al { columns: 3; column-gap: 5mm; font-size: 6.8pt; line-height: 1.5; color: #5B646B; padding-top: 4mm; border-top: .35mm solid #D9DDE1; margin-top: 4mm; }
+.al b { color: var(--akcent-text); }
+
+/* týždeň */
+.tyz .obsah { columns: auto; flex: 1 1 auto; padding-top: 4mm; }
+.den { display: grid; grid-template-columns: 30mm 1fr; gap: 0 6mm; padding: 2.4mm 0; border-top: .35mm solid #D9DDE1; }
+.den:first-child { border-top: 0; }
+.den h2 { font-size: 13pt; font-weight: 700; color: var(--akcent-text); margin: 1.4mm 0 0; }
+.den .pol { padding: .8mm 0; }
+.tyz__uvod { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 6mm; }
+.tyz__uvod h1 { font-size: 34pt; font-weight: 800; letter-spacing: -.03em; margin: 0; line-height: 1; }
+.tyz__uvod p { margin: 0; text-align: right; font-size: 10.5pt; line-height: 1.5; color: #3A4247; }
+.tyz__uvod p b { color: var(--akcent-text); font-size: 15pt; }
+
+/* plagát dňa */
+.plg .foto { height: 118mm; border-radius: 4mm; }
+.plg__den { display: flex; justify-content: space-between; align-items: baseline; margin-top: 9mm; }
+.plg__den h1 { font-size: 50pt; font-weight: 800; letter-spacing: -.035em; margin: 0; line-height: 1; }
+.plg__den p { margin: 0; font-size: 11pt; text-align: right; line-height: 1.5; color: #3A4247; }
+.plg__den p b { font-size: 20pt; color: var(--akcent-text); }
+.plg .zoznam { margin-top: 7mm; }
+.plg .pol { padding: 3.4mm 0; border-top: .35mm solid #D9DDE1; }
+.plg .pol:first-child { border-top: 0; }
+.plg .pol b { font-size: 16pt; }
+.plg .pol .c { font-size: 17pt; color: var(--akcent-text); }
+.plg .pol .m { font-size: 9.5pt; }
+</style>
+</head><body><section class="a4 tit">
+<div class="foto"><img src="../assets/foto/foto-20261015-145757.webp" alt=""></div>
+<div class="logo">Hostinec Steip</div>
+<p class="tit__podnadpis">Jedálny lístok</p>
+<p class="tit__claim">Obedové menu každý pracovný deň od 11:00 do 14:00 a rozvoz obedov po Šaštíne-Strážach a okolí. Pozrite si náš jedálny lístok.</p>
+<div class="tit__info"><div><b>Otvorené</b>Pondelok: 11:00 - 14:30<br>Utorok: 11:00 - 14:30, 17:00 - 21:00<br>Streda - Štvrtok: 11:00 - 14:30<br>Piatok: 11:00 - 14:30, 16:00 - 24:00<br>Sobota: 16:00 - 24:00<br>Nedeľa: 16:00 - 20:00</div><div><b>Nájdete nás</b>Do Gazárky 1320, Šaštín, 908 41 Šaštín-Stráže<br>+421 918 610 976<br>mach.palo@gmail.com</div></div>
+</section><section class="a4">
+<div class="hl"><span class="logo">Hostinec Steip</span><span>Jedálny lístok</span></div>
+<div class="obsah"><div class="kat"><h2>Čapujeme</h2><div class="pol"><b>Pivo POUTNÍK svetlý ležiak 12</b><span class="c">1,50 €</span><span class=m>0,5 l</span></div><div class="pol"><b>KOFOLA originál</b><span class="c">1,50 €</span><span class=m>0,5 l</span></div><div class="pol"><b>TOP TOPIC mango, malina</b><span class="c">1,50 €</span><span class=m>0,5 l</span></div></div><div class="kat"><h2>Polievky</h2><div class="pol"><b>Hrášková krémová s krutónmi</b><span class="c">2,20 €</span><span class=m>0,33 l, A 1,7</span></div></div><div class="kat"><h2>Menu polievka</h2><div class="pol"><b>Hrášková krémová s krutónmi</b><span class="c">0,60 €</span><span class=m>0,33 l, A 1,7</span></div></div><div class="kat"><h2>Menu jedlá</h2><div class="pol"><b>Hovädzí guláš, knedľa</b><span class="c">6,40 €</span><span class=m>130 g, A 1,3,7</span></div><div class="pol"><b>Pečená bravčová krkovička, kapusta, knedľa</b><span class="c">6,20 €</span><span class=m>130 g, A 1,3,7</span></div><div class="pol"><b>Bravčové rizoto so zeleninou a syrom, zeleninový šalát</b><span class="c">6,20 €</span><span class=m>350 g, A 7</span></div><div class="pol"><b>Kurací plátok na hubovej omáčke, ryža, zeleninový šalát</b><span class="c">6,20 €</span><span class=m>130 g, A 1,7</span></div><div class="pol"><b>Znojemská hovädzia roštenka, ryža, uhorka</b><span class="c">7,00 €</span><span class=m>Hovädzie stehno, horčica, uhorka. 130 g, A 1,10</span></div><div class="pol"><b>Vyprážaný karfiol, zemiaky, tatárska omáčka</b><span class="c">6,20 €</span><span class=m>150 g, A 1,3,7</span></div></div><div class="kat"><h2>Extra menu</h2><div class="pol"><b>Vyprážané kuracie stripsy, zemiakové hranolky, omáčka</b><span class="c">7,00 €</span><span class=m>Omáčka cesnaková, burgrová, barbeque alebo tatárska. 150 g, A 1,3,7</span></div><div class="pol"><b>Zemiakové šúľance s makom</b><span class="c">6,00 €</span><span class=m>300 g, A 1,7</span></div><div class="pol"><b>Vyprážaný bravčový alebo kurací rezeň, zemiaky alebo ryža, šalát podľa dennej ponuky</b><span class="c">7,20 €</span><span class=m>150 g, A 1,3,7</span></div><div class="pol"><b>Vyprážaný syr, zemiaky alebo zemiakové hranolky, tatárska omáčka</b><span class="c">7,20 €</span><span class=m>150 g, A 1,3,7</span></div><div class="pol"><b>Vyprážaný hermelín, zemiaky alebo zemiakové hranolky, tatárska omáčka</b><span class="c">6,80 €</span><span class=m>130 g, A 1,3,7</span></div><div class="pol"><b>Grécky šalát s balkánskym syrom, bagetka</b><span class="c">7,00 €</span><span class=m>300 g, A 1,7</span></div><div class="pol"><b>Burger, zemiakové hranolky alebo zemiakové chipsy</b><span class="c">7,50 €</span><span class=m>Hovädzie mäso, dressing, ľadový šalát, paradajka, cibuľa, syr, jalapeño paprika. 150 g, A 1,7</span></div><div class="pol"><b>Lokša s makom alebo s makom a slivkovým lekvárom</b><span class="c">1,70 €</span><span class=m>100 g, A 1</span></div><div class="pol"><b>Pizza podľa dennej ponuky</b><span class="c">7,50 €</span><span class=m>Hawai (syr, šunka, ananás), Americana (syr, šunka, kukurica), Salami (syr, saláma), Picante (syr, slanina, klobása, cibuľa, baranie rohy, chilli papričky), Quattro formaggi (eidam, hermelín, niva, parmezán). 450 g, A 1,7</span></div></div><div class="kat"><h2>Jedlá na objednávku</h2><div class="pol"><b>Palacinka s džemom alebo s nutelou, šľahačkou a čokoládou</b><span class="c">1,50 €</span><span class=m>80 g, A 1,3,7,8</span></div><div class="pol"><b>Grilovaný hermelín s brusnicami</b><span class="c">6,80 €</span><span class=m>120 g, A 7</span></div><div class="pol"><b>Grilovaný losos na masle</b><span class="c">8,00 €</span><span class=m>150 g, A 4,7</span></div><div class="pol"><b>Prírodný bravčový alebo kurací rezeň so syrom</b><span class="c">7,50 €</span><span class=m>150 g, A 7</span></div><div class="pol"><b>Vyprážaný kurací gordon blue</b><span class="c">8,00 €</span><span class=m>Kuracie prsia, tehla syr, šunka. 200 g, A 1,3,7</span></div></div></div>
+
+<div class="pata"><span>Hostinec Steip, Do Gazárky 1320, Šaštín, 908 41 Šaštín-Stráže</span><span>+421 918 610 976   <span class=cislo>2</span></span></div>
+</section><section class="a4">
+<div class="hl"><span class="logo">Hostinec Steip</span><span>Jedálny lístok</span></div>
+<div class="obsah"><div class="kat"><h2>Jedlá na objednávku</h2><div class="pol"><b>Čiernohorský bravčový alebo kurací rezeň</b><span class="c">8,00 €</span><span class=m>200 g, A 1,3,7</span></div></div><div class="kat"><h2>Rozvoz jedál</h2><div class="pol"><b>Šaštín-Stráže</b><span class="c"></span><span class=m>11.00 - 13.30 hod</span></div><div class="pol"><b>Dovoz mimo Šaštín-Stráže</b><span class="c">0,50 €</span></div><div class="pol"><b>Borský Mikuláš, Dojč, Štefanov</b><span class="c"></span><span class=m>Treba objednať do 10.00 hod., po 10.00 hod. účtujeme 1,00 €. </span></div><div class="pol"><b>Smolinské, Čáry, Kuklov, Borský sv. Jur</b><span class="c"></span><span class=m>Treba objednať do 11.00 hod., po 11.00 hod. 1,00 €. </span></div><div class="pol"><b>Objednávky prijímame od 7.00 do 13.00 hod.</b><span class="c"></span><span class=m>Tel. č. 0918 610 976, 0948 106 409 </span></div></div></div>
+<div class="al"><p style="margin:0 0 2mm"><b>Váha jedál je uvedená v hotovom stave.</b></p><div><b>1</b> Obilniny obsahujúce lepok</div><div><b>2</b> Kôrovce</div><div><b>3</b> Vajcia</div><div><b>4</b> Ryby</div><div><b>5</b> Arašidy</div><div><b>6</b> Sójové zrná</div><div><b>7</b> Mlieko</div><div><b>8</b> Orechy</div><div><b>9</b> Zeler</div><div><b>10</b> Horčica</div><div><b>11</b> Sezamové semená</div><div><b>12</b> Oxid siričitý a siričitany</div><div><b>13</b> Vlčí bôb</div><div><b>14</b> Mäkkýše</div></div>
+<div class="pata"><span>Hostinec Steip, Do Gazárky 1320, Šaštín, 908 41 Šaštín-Stráže</span><span>+421 918 610 976   <span class=cislo>3</span></span></div>
+</section></body></html>
