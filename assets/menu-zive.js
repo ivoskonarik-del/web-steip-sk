@@ -101,6 +101,7 @@
     tradicia: [".obal.listok"],
     bistro: ['section.blok[aria-label="Celý jedálny lístok"]'],
     kaviaren: [".k-kat-nav", ".k-listok"],
+    portal: [".k-kat-nav", ".k-listok"], // 3. 11. 2026 Steip: portál má značky kaviarne, bez riadku sa fotka lístka dala až na koniec a starý lístok ostal
     trattoria: [".tr-kn", ".tr-lk"]
   };
 
