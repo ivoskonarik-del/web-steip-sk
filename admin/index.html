@@ -6,13 +6,13 @@
 <meta name="theme-color" content="#f6f5f2">
 <link rel="stylesheet" href="../assets/admin.css">
 <style>:root{--mz-akcent:#1d1f22}</style>
-</head><body class="mz" data-api="https://webhunter-menu-api.prodej-bytu-3-1-70-m2-172175436.workers.dev" data-site="hostinec-steip-sme14846" data-nazov="Hostinec Steip" data-bez-menu="1">
+</head><body class="mz" data-api="https://webhunter-menu-api.prodej-bytu-3-1-70-m2-172175436.workers.dev" data-site="hostinec-steip-sme14846" data-nazov="Hostinec Steip">
 <noscript><p class="mz-noscript">Administrácia potrebuje zapnutý JavaScript.</p></noscript>
 <section class="mz-login" id="login" hidden>
   <form class="mz-login__karta" id="login-form" novalidate>
     <p class="mz-login__web">Hostinec Steip</p>
     <h1>Administrácia menu</h1>
-    <p class="mz-tichy">Jedálny lístok a otváracie hodiny si zmeníte sami, aj z telefónu.</p>
+    <p class="mz-tichy">Denné menu, jedálny lístok a otváracie hodiny si zmeníte sami, aj z telefónu.</p>
     <label class="mz-pole"><span>Heslo</span>
       <input type="password" id="heslo" name="heslo" autocomplete="current-password" required></label>
     <label class="mz-check"><input type="checkbox" id="zapamatat" checked><span>Zostať prihlásený na tomto zariadení</span></label>
@@ -27,7 +27,7 @@
       <a class="mz-tl mz-tl--maly" href="../" id="na-web">Web</a>
       <button class="mz-tl mz-tl--maly" type="button" id="odhlasit">Odhlásiť</button></div>
     <div class="mz-taby" role="tablist" aria-label="Čo upraviť">
-      <button role="tab" type="button" id="tab-menu" aria-controls="panel-menu" aria-selected="true" hidden>Denné menu</button>
+      <button role="tab" type="button" id="tab-menu" aria-controls="panel-menu" aria-selected="true">Denné menu</button>
       <button role="tab" type="button" id="tab-listok" aria-controls="panel-listok" aria-selected="false" tabindex="-1">Jedálny lístok</button>
       <button role="tab" type="button" id="tab-hodiny" aria-controls="panel-hodiny" aria-selected="false" tabindex="-1">Otváracie hodiny</button>
     </div>
@@ -44,6 +44,6 @@
   </div>
   <div class="mz-toast" id="toast" role="status" hidden></div>
 </div>
-<script type="application/json" id="mz-povodne">{"tyzden": "", "cas": "v pracovné dni 11:00 – 14:00, rozvoz 11:00 – 13:30", "dni": [], "hodiny": [["Pondelok", "11:00 – 14:30"], ["Utorok", "11:00 – 14:30, 17:00 – 21:00"], ["Streda – Štvrtok", "11:00 – 14:30"], ["Piatok", "11:00 – 14:30, 16:00 – 24:00"], ["Sobota", "16:00 – 24:00"], ["Nedeľa", "16:00 – 20:00"]]}</script>
+<script type="application/json" id="mz-povodne">{"tyzden": "tento týždeň", "cas": "v pracovné dni 11:00 – 14:00, rozvoz 11:00 – 13:30", "dni": [{"den": "Pondelok", "polievka": [], "jedla": [{"nazov": "Menu na tento deň pripravujeme", "mnozstvo": "", "cena": "", "alergeny": ""}]}, {"den": "Utorok", "polievka": [], "jedla": [{"nazov": "Menu na tento deň pripravujeme", "mnozstvo": "", "cena": "", "alergeny": ""}]}, {"den": "Streda", "polievka": [], "jedla": [{"nazov": "Menu na tento deň pripravujeme", "mnozstvo": "", "cena": "", "alergeny": ""}]}, {"den": "Štvrtok", "polievka": [], "jedla": [{"nazov": "Menu na tento deň pripravujeme", "mnozstvo": "", "cena": "", "alergeny": ""}]}, {"den": "Piatok", "polievka": [], "jedla": [{"nazov": "Menu na tento deň pripravujeme", "mnozstvo": "", "cena": "", "alergeny": ""}]}], "hodiny": [["Pondelok", "11:00 – 14:30"], ["Utorok", "11:00 – 14:30, 17:00 – 21:00"], ["Streda – Štvrtok", "11:00 – 14:30"], ["Piatok", "11:00 – 14:30, 16:00 – 24:00"], ["Sobota", "16:00 – 24:00"], ["Nedeľa", "16:00 – 20:00"]]}</script>
 <script src="../assets/admin.js" defer></script>
 </body></html>

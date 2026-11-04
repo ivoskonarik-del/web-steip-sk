@@ -96,7 +96,8 @@
     }).join("");
     return '<ul class="tr-pol">' + h + "</ul>";
   };
-  var DNES_TRIEDA = { tradicia: "den--dnes", bistro: "den--dnes", kaviaren: "k-den--dnes", trattoria: "je-dnes" };
+  R.portal = R.kaviaren; // 4. 11. 2026 Steip: portál kreslí dni menu cez kaviaren.den_html
+  var DNES_TRIEDA = { tradicia: "den--dnes", bistro: "den--dnes", kaviaren: "k-den--dnes", portal: "k-den--dnes", trattoria: "je-dnes" };
   var LISTOK_OBSAH = {
     tradicia: [".obal.listok"],
     bistro: ['section.blok[aria-label="Celý jedálny lístok"]'],
@@ -172,9 +173,22 @@
       if (!a.closest("#wh-navrh")) skry(a);
     });
   }
+  function domovKarta(box, menu, cfg, render) { // portál: na úvode jeden deň (.p-menu__den), dnešok alebo prvý deň
+    nahradText(box.closest("section") || box.parentNode, cfg.cas, menu.cas);
+    if (menu.rezim === "subor") {
+      var b = suborHtml(menu.subor, "Denné menu", "mz-subor--domov");
+      if (b) { box.innerHTML = ""; box.appendChild(b); }
+      return;
+    }
+    var dni = (menu.dni || []).filter(function (d) { return d && d.den; });
+    if (!dni.length) return;
+    var d = dni[Math.max(0, indexDnes(dni))];
+    prvyText(box.querySelector("h2, h3"), d.den);
+    vymenUl(box, render(d));
+  }
   function domov(menu, cfg, render) {
     var zoz = document.querySelector('[role=tablist][aria-label="Dni v týždni"]');
-    if (!zoz) return;
+    if (!zoz) { var karta = document.querySelector(".p-menu__den"); if (karta) domovKarta(karta, menu, cfg, render); return; }
     var sekcia = zoz.closest("section") || zoz.parentNode;
     var tabs = [].slice.call(zoz.querySelectorAll("[role=tab]"));
     var panely = tabs.map(function (t) { return document.getElementById(t.getAttribute("aria-controls")); });
